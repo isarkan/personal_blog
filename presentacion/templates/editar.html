@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Artículo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Editar Artículo</h1>
+</header>
+
+<div class="container">
+
+    <form method="POST">
+        <label>Título</label>
+        <input type="text" name="titulo" value="{{ articulo.titulo }}" required>
+
+        <label>Contenido</label>
+        <textarea name="contenido" rows="8" required>{{ articulo.contenido }}</textarea>
+
+        <button type="submit" class="btn">Actualizar</button>
+    </form>
+
+</div>
+
+</body>
+</html>

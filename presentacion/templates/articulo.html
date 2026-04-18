@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ articulo.titulo }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>{{ articulo.titulo }}</h1>
+</header>
+
+<div class="container">
+    <div class="card">
+        <p><strong>Fecha:</strong> {{ articulo.fecha_publicacion }}</p>
+        <p>{{ articulo.contenido }}</p>
+    </div>
+
+    <a href="/" class="btn">Volver</a>
+</div>
+
+</body>
+</html>

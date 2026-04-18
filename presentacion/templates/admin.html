@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Administrador</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Panel de Administración</h1>
+</header>
+
+<div class="container">
+
+    <a href="/admin/crear" class="btn">+ Nuevo Artículo</a>
+
+    {% for articulo in articulos %}
+    <div class="card">
+        <h2>{{ articulo.titulo }}</h2>
+
+        <a href="/admin/editar/{{ articulo.id }}" class="btn">Editar</a>
+        <a href="/admin/eliminar/{{ articulo.id }}" class="btn">Eliminar</a>
+    </div>
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
