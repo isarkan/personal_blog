@@ -1,11 +1,15 @@
 from flask import Flask, render_template, request, redirect
-from infraestructura.repositorio import ArticuloRepositorioMemoria
+from infraestructura.repositorio.art_repo_memoria import ArticuloRepositorioMemoria
 from aplicacion.casos_uso.listar_art import ListarArticulos
 from aplicacion.casos_uso.crear_art import CrearArticulo
 from aplicacion.casos_uso.editar_art import EditarArticulo
 from aplicacion.casos_uso.eliminar_art import EliminarArticulo
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder='templates',
+    static_folder='static'
+)
 repo = ArticuloRepositorioMemoria()
 
 @app.route('/')

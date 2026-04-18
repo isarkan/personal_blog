@@ -1,0 +1,12 @@
+# Ignorar todos los __pycache__ en cualquier ubicación
+__pycache__/
+
+# Ignorar archivos compilados de Python
+*.pyc
+*.pyo
+
+# Ignorar entornos virtuales
+venv/
+
+# Ignorar configuraciones locales
+.env
