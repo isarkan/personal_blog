@@ -6,15 +6,18 @@
 </head>
 <body>
 
-<header>
-    <h1>Mi Blog Personal</h1>
-</header>
+<div class="navbar">
+    <a href="/">🏠 Inicio</a>
+    <a href="/admin" class="btn">Ingresar</a>
+</div>
 
 <div class="container">
+    <h1>Artículos</h1>
+
     {% for articulo in articulos %}
     <div class="card">
         <h2>{{ articulo.titulo }}</h2>
-        <p>{{ articulo.contenido[:100] }}...</p>
+        <p>{{ articulo.contenido[:120] }}...</p>
         <a href="/articulo/{{ articulo.id }}" class="btn">Leer más</a>
     </div>
     {% endfor %}

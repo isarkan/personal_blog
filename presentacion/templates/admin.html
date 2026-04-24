@@ -6,11 +6,13 @@
 </head>
 <body>
 
-<header>
-    <h1>Panel de Administración</h1>
-</header>
+<div class="navbar">
+    <a href="/">🏠 Inicio</a>
+</div>
 
 <div class="container">
+
+    <h1>Panel de Administración</h1>
 
     <a href="/admin/crear" class="btn">+ Nuevo Artículo</a>
 
@@ -19,7 +21,7 @@
         <h2>{{ articulo.titulo }}</h2>
 
         <a href="/admin/editar/{{ articulo.id }}" class="btn">Editar</a>
-        <a href="/admin/eliminar/{{ articulo.id }}" class="btn">Eliminar</a>
+        <a href="/admin/eliminar/{{ articulo.id }}" class="btn btn-danger">Eliminar</a>
     </div>
     {% endfor %}
 
